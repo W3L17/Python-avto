@@ -1,9 +1,6 @@
-
-# Импортируем классы
 from addres import Address
 from mailing import Mailing
 
-# Создаем экземпляр класса Mailing
 my_mailing = Mailing(
     # Заполняем поле to_address - создаем объект Address для адреса назначения
     to_address = Address(
@@ -29,12 +26,12 @@ my_mailing = Mailing(
     # Заполняем поле track - трек-номер (строка)
     track = "TRACK123456"
 )
+    # Заполняем поле cost - стоимость (число)
+cost = 150,
+    
+    # Заполняем поле track - трек-номер (строка)
+track = "TRACK123456"
 
-# Проверяем, что все поля заполнены правильно
-print("Экземпляр Mailing создан успешно!")
-print(f"Трек-номер: {my_mailing.track}")
-print(f"Стоимость: {my_mailing.cost} рублей")
-print(f"Адрес назначения: {my_mailing.to_address.city}, ул. {my_mailing.to_address.street}")
-print(f"Адрес отправителя: {my_mailing.from_address.city}, ул. {my_mailing.from_address.street}")
 
-        
+print(f"Отправление {my_mailing.track} из:{my_mailing.from_address.index},{my_mailing.from_address.city},{my_mailing.from_address.street},{my_mailing.from_address.home},{my_mailing.from_address.home},{my_mailing.from_address.flat} в {my_mailing.to_address.city},{my_mailing.to_address.street},{my_mailing.to_address.home} - {my_mailing.to_address.flat}.Стоимость {my_mailing.cost} ")
+
