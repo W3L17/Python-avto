@@ -9,5 +9,5 @@ catalog.append(Smartphone("Google", "Pixel 7", "+79456789012"))
 catalog.append(Smartphone("OnePlus", "11 Pro", "+79567890123"))
 
 
-for dota in catalog:
-    print(f"{dota.brand}, {dota.model},{dota.number}")
+for phone in catalog:
+    print(f"{phone.brand}, {phone.model},{phone.number}")
