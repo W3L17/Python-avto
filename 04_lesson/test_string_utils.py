@@ -63,7 +63,8 @@ def test_delete_symbol_positive(string,symbol,expected):
 ("123abc","123abc"),
 ("123","123"),
 ("04 апреля","04 апреля"),
- ([""])
+ ([], ""),
+ (None,None)
  ])
 def test_capitalize_negative(input_word,expected):
     stringUtils = StringUtils()
@@ -76,7 +77,8 @@ def test_capitalize_negative(input_word,expected):
 ("123abc","123abc"),
 ("123","123"),
 ("04 апреля","04 апреля"),
- ([""])
+([], ""),
+ (None,None)
  ])
 def test_trim_negative(input_word,expected):
     stringUtils = StringUtils()
@@ -85,11 +87,12 @@ def test_trim_negative(input_word,expected):
 
 
 @pytest.mark.parametrize("string,symbol,expected",
-[("",""),
-("123abc","123abc"),
-("123","123"),
-("04 апреля","04 апреля"),
- ([""])
+[("",False,"",),
+("123abc",False,"123abc"),
+("123",False,"123"),
+("04 апреля",False,"04 апреля"),
+([],False,""),
+ (None,False,None)
  ])
 def test_contains_negative(string,symbol,expected):
     stringUtils = StringUtils()
@@ -97,11 +100,13 @@ def test_contains_negative(string,symbol,expected):
     assert res == expected
 
 @pytest.mark.parametrize("string,symbol,expected",
+
 [("",""),
 ("123abc","123abc"),
 ("123","123"),
 ("04 апреля","04 апреля"),
- ([""])
+([], ""),
+ (None,None)
  ])
 
 def test_delete_symbol_negative(string,symbol,expected):
